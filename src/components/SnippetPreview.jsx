@@ -1,10 +1,24 @@
+import { forwardRef } from 'react';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+// We import three distinct themes for our dropdown
+import { atomOneDark, dracula, github } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
-export default function SnippetPreview({ code }) {
+// A dictionary to map our string state to the actual theme objects
+const themeMap = {
+  dark: atomOneDark,
+  dracula: dracula,
+  github: github,
+};
+
+// We use forwardRef so the Boss (App.jsx) can point a camera at this exact component
+const SnippetPreview = forwardRef(({ code, language, theme, padding }, ref) => {
   return (
-    <div className="w-full p-8 rounded-2xl bg-gradient-to-br from-purple-500 via-violet-600 to-indigo-700 shadow-2xl flex items-center justify-center">
-      
+    // We attach the 'ref' here. Everything inside this div gets captured in the screenshot!
+    // Notice how we inject the dynamic `padding` state right into the Tailwind classes.
+    <div 
+      ref={ref} 
+      className={`w-full ${padding} rounded-2xl bg-linear-to-br from-purple-500 via-violet-600 to-indigo-700 shadow-2xl flex items-center justify-center`}
+    >
       <div className="w-full max-w-2xl bg-[#1e1e1e] rounded-xl shadow-2xl overflow-hidden border border-gray-700/50">
         
         {/* macOS Header */}
@@ -19,12 +33,12 @@ export default function SnippetPreview({ code }) {
         {/* The Magic Syntax Highlighter */}
         <div className="text-sm">
           <SyntaxHighlighter
-            language="javascript"
-            style={atomOneDark}
+            language={language}
+            style={themeMap[theme]}
             customStyle={{
               margin: 0,
               padding: '1.5rem',
-              background: 'transparent',
+              background: theme === 'github' ? '#ffffff' : 'transparent', // Make light mode pop
             }}
           >
             {code}
@@ -34,4 +48,6 @@ export default function SnippetPreview({ code }) {
       </div>
     </div>
   );
-}
+});
+
+export default SnippetPreview;
