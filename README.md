@@ -81,4 +81,4 @@ This project is licensed under the MIT Licence. Feel free to fork, customise, an
 
 ---
 
-Developed with precision by Sri Vigneswaran
+*Developed with precision by Sri Vigneswaran*
