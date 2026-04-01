@@ -40,7 +40,7 @@ To spin up a local instance of the SnipSnap environment, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/SriVigneswaran7/SnipSnap.git](https://github.com/SriVigneswaran7/SnipSnap.git)
+    git clone https://github.com/SriVigneswaran7/SnipSnap.git
     cd SnipSnap
     ```
 
