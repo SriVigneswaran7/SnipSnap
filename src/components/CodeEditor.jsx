@@ -1,15 +1,13 @@
 export default function CodeEditor({ code, setCode }) {
   return (
-    <div className="w-full mb-8">
-      <label className="block text-sm font-medium text-gray-400 mb-2">
-        Paste your code here:
-      </label>
+    <div className="flex flex-col gap-2">
+      <label className="text-[10px] font-bold text-gray-500 uppercase tracking-[0.15em] ml-1">Input Code</label>
       <textarea
         value={code}
         onChange={(e) => setCode(e.target.value)}
         spellCheck="false"
-        className="w-full h-40 p-4 bg-[#1e1e1e] text-gray-300 border border-gray-700/50 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 font-mono resize-y"
-        placeholder="// Paste your raw code..."
+        className="w-full h-32 p-4 bg-white/2 backdrop-blur-[20px] text-gray-400 border border-white/10 rounded-xl focus:outline-none focus:border-white/20 font-mono text-[13px] leading-relaxed resize-y transition-all shadow-xl"
+        placeholder="// Paste code..."
       />
     </div>
   );
