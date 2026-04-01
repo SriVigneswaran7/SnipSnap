@@ -10,7 +10,7 @@
 
 | System Interface |
 | :---: |
-| ![SnipSnap UI](./SnipSnap-UI.png) |
+| ![SnipSnap UI](./SnipSnap-Ui.png) |
 
 ---
 
