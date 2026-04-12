@@ -1,5 +1,12 @@
 # SnipSnap
 
+![React](https://img.shields.io/badge/React-Framework-blue)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4.0-06B6D4)
+![Vite](https://img.shields.io/badge/Vite-Bundler-646CFF)
+![html-to-image](https://img.shields.io/badge/html--to--image-Export-orange)
+![Highlight.js](https://img.shields.io/badge/Highlight.js-Syntax-red)
+![License](https://img.shields.io/badge/License-MIT-success)
+
 > Spatial code beautification for the modern developer.
 
 **SnipSnap** is a high-end, minimalist developer tool designed to transform raw code into professional, shareable assets. Eschewing the overused macOS aesthetic, SnipSnap utilises a bespoke **Industrial Design Language**—characterised by deep blacks, micro-grid textures, and authentic glassmorphism.
